@@ -1,0 +1,161 @@
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: justify;
+}
+  
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+#BannerWrx {
+    width: 100%;
+}
+.mainText {
+    padding: 0.6em;
+}
+
+header {
+    padding: 0.5em;
+    grid-column: span 4;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: #241e1e;
+    color: white;
+}
+#LogoGSQ{
+    width: 100px;
+    display: inline;
+    vertical-align: middle; 
+    padding-right: 1rem;
+}
+#TitleGSQ{
+    display: none;
+}
+  
+main {
+    flex: 1;
+    grid-row: span 3;
+    grid-column: span 3;
+}
+  
+footer {
+    grid-column: span 4;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.4em;
+    background-color: #690;
+    color: white;
+}
+  
+h1 {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+nav {
+    grid-row: span 3;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 3em;
+    width: 100%;
+    line-height: 3em;
+    border-top: 2px solid #a7a5a5;
+    background-color: #557a95;
+    text-align: center;
+}
+  
+nav a:link, a:visited {
+    height: 100%;
+    width: 32%;
+    font-size: 1em;
+    text-decoration: none;
+    vertical-align: middle;
+    color: #241e1e;  
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/*-------Main Text -----*/
+.mainText h2{
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #5D5c61;
+    font-size: 1.5em;
+    margin: 10px 0 0 0;
+}
+
+.mainText h3{
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #5D5c61;
+    font-size: 1em;
+    margin: 10px 0 0 0;
+}
+.mainText p {
+    color: #557a95;
+    font-size: 0.75em;
+    margin-top: 8px;
+}
+.mainText a{
+    text-decoration: none;
+}
+
+@media (min-width: 550px) {
+    .container {
+      display: grid;
+      grid-template-columns: 130px  1fr 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr 1fr auto;
+    }
+    nav a:link, a:visited {
+        padding: 0.7em 0 0.7em 0;
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #7395AE;
+    }
+    nav {
+        position:relative;
+        line-height: 1.5em;
+        height: 100%;
+    }
+    nav a:hover {
+        background-color: #7395AE;
+    }
+
+    #TitleGSQ{
+        margin-left: 10px;
+        display: inline ;
+        vertical-align: middle;
+        color: #a7a5a5;
+    }
+    #LogoGSQ{
+        border-right: 2px solid #a7a5a5;
+    }
+    .aContain {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 1px
+    }
+
+
+    /*-------Main Text -----*/
+    .mainText h2{
+        margin: 30px 0 0 0;
+        font-size: 2.5em ;
+    }
+    
+    .mainText h3{
+        font-size: 1.2em;
+    }
+    .mainText p {
+        font-size: 1em;
+    }
+}
