@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: justify;
@@ -5,9 +6,8 @@ body {
   
 .container {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
   
 #BannerWrx {
@@ -19,7 +19,6 @@ body {
 
 header {
     padding: 0.5em;
-    grid-column: span 4;
     text-align: center;
     font-size: 1.4em;
     background-color: #241e1e;
@@ -37,17 +36,18 @@ header {
   
 main {
     flex: 1;
-    grid-row: span 3;
-    grid-column: span 3;
+    overflow: hidden;
+    min-height: 100%;
 }
   
 footer {
-    grid-column: span 4;
-    padding: 30px;
-    text-align: center;
-    font-size: 1.4em;
-    background-color: #690;
-    color: white;
+    font-size: 1.1em;
+    background-color: #241e1e;
+}
+footer p{
+    font-size: 0.8em;
+    color: rgb(167, 165, 165);
+    margin: 5px;
 }
   
 h1 {
@@ -57,9 +57,6 @@ h1 {
 }
 
 nav {
-    grid-row: span 3;
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     height: 3em;
     width: 100%;
@@ -70,6 +67,8 @@ nav {
 }
   
 nav a:link, a:visited {
+    position: -webkit-sticky;
+    position: sticky;
     height: 100%;
     width: 32%;
     font-size: 1em;
@@ -110,10 +109,19 @@ nav a:hover{
 }
 
 @media (min-width: 550px) {
+    header{
+        grid-column: span 4;
+    }
+    footer{
+        grid-column: span 4;
+    }
+    main {
+        grid-column: span 3;
+    }
     .container {
       display: grid;
       grid-template-columns: 130px  1fr 1fr 1fr;
-      grid-template-rows: auto 1fr 1fr 1fr auto;
+      grid-template-rows: auto 1fr auto;
     }
     nav a:link, a:visited {
         padding: 0.7em 0 0.7em 0;
@@ -122,9 +130,9 @@ nav a:hover{
         border-bottom: 1px solid #7395AE;
     }
     nav {
-        position:relative;
         line-height: 1.5em;
         height: 100%;
+        border-bottom: 2px solid #a7a5a5;
     }
     nav a:hover {
         background-color: #7395AE;
